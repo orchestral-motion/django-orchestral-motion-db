@@ -9,8 +9,6 @@ class Command(BaseCommand):
     help = 'Load junk data into the Position model'
 
     def handle(self, *args, **options):
-        # Flush what's there
-        Position.objects.all().delete()
         # Load in junk
         for x in range(1, 101):
             Position.objects.create(

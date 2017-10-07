@@ -3,7 +3,6 @@ from __future__ import unicode_literals
 from django.db import models
 
 
-
 class Position(models.Model):
     """
     A snapshot of the position of the accelerometer at a moment in time.
