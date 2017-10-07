@@ -6,4 +6,9 @@ from .models import Position
 
 @admin.register(Position)
 class PositionAdmin(admin.ModelAdmin):
-    pass
+    list_display = (
+        "timestamp",
+        "x",
+        "y",
+        "z"
+    )
