@@ -8,10 +8,10 @@ from .models import Position
 
 def download(request):
     # Create the HttpResponse object with the appropriate CSV header.
-    response = HttpResponse(content_type='text/csv')
+    response = HttpResponse() #content_type='text/csv')
     # response['Content-Disposition'] = 'attachment; filename="somefilename.csv"'
     writer = csv.writer(response)
     writer.writerow(['timestamp', 'x', 'y', 'z'])
     for obj in Position.objects.all()[:100]:
-        writer.writerow(map(str, [obj.timestamp, obj.x, obj.y, obj.z]))
+        writer.writerow(map(str, [obj.timestamp, obj.x, obj.y, oby.z]))
     return response
