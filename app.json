@@ -1,0 +1,17 @@
+
+{
+  "name": "django-orchestral-motion-db",
+  "description": "django-orchestral-motion-db.",
+  "image": "heroku/python",
+  "repository": "https://github.com/orchestral-motion/django-orchestral-motion-db.git",
+  "keywords": ["python", "django" ],
+  "addons": [ "heroku-postgresql", "heroku-redis" ],
+  "environments": {
+    "test": {
+      "scripts": {
+        "test-setup": "python manage.py collectstatic --noinput",
+        "test": "python manage.py test"
+      }
+    }
+  }
+}
