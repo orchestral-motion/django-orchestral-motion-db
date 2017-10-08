@@ -13,5 +13,5 @@ def download(request):
     writer = csv.writer(response)
     writer.writerow(['timestamp', 'x', 'y', 'z'])
     for obj in Position.objects.all()[:100]:
-        writer.writerow(map(str, [obj.timestamp, obj.x, obj.y, oby.z]))
+        writer.writerow(map(str, [obj.timestamp, obj.x, obj.y, obj.z]))
     return response
