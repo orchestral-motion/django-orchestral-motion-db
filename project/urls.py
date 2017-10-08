@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from accelerometer.views import download
 from django.views.generic import TemplateView
 
 
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name="accelerometer/index.html")),
+    url(r'^download/$', download),
     url(r'^admin/', admin.site.urls),
 ]
