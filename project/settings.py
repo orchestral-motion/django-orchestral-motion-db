@@ -27,7 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '192.168.2.125',
-    'localhost'
+    'localhost',
+    'murmuring-dawn-85833.herokuapp.com'
 ]
 
 
