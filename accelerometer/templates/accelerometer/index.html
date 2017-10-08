@@ -5,8 +5,7 @@
     <script src="{% static "channels/js/websocketbridge.js" %}"></script>
 </head>
 <body>
-    <h1>Hello Phil!</h1>
-    <button>Create!</button>
+    <h1>Incoming!</h1>
     <section id="events" name="events">
         <ul></ul>
     </section>
@@ -26,18 +25,6 @@
                     var li = "<li>" + payload.data.timestamp + "</li>"
                     ul.append(li);
                 }
-            });
-            $("button").click(function () {
-                console.log("Create!");
-                webSocketBridge.stream('position').send({
-                    "pk": 1,
-                    "action": "create",
-                    "data": {
-                        "x": 1,
-                        "y": 2,
-                        "z": 3
-                    }
-                });
             });
             // Helpful debugging
             webSocketBridge.socket.addEventListener('open', function() { console.log("Connected to notification socket"); });
