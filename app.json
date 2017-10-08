@@ -5,7 +5,7 @@
   "image": "heroku/python",
   "repository": "https://github.com/orchestral-motion/django-orchestral-motion-db.git",
   "keywords": ["python", "django" ],
-  "addons": [ "heroku-postgresql", "heroku-redis" ],
+  "addons": [ "heroku-postgresql", "heroku-redis", "gunicorn" ],
   "environments": {
     "test": {
       "scripts": {
