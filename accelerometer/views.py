@@ -8,7 +8,7 @@ from .models import Position
 
 def download(request):
     # Create the HttpResponse object with the appropriate CSV header.
-    response = HttpResponse() #content_type='text/csv')
+    response = HttpResponse(content_type='text/plain')
     # response['Content-Disposition'] = 'attachment; filename="somefilename.csv"'
     writer = csv.writer(response)
     writer.writerow(['timestamp', 'x', 'y', 'z'])
